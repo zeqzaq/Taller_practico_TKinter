@@ -1,8 +1,10 @@
 import tkinter as tk
 from tkinter import messagebox
 import json
+import os
 
-ARCHIVO_USUARIOS = "credenciales.json"
+BASE_DIR = os.path.dirname(__file__)
+ARCHIVO_USUARIOS = os.path.join(BASE_DIR, "credenciales.json")
 
 def limpiar_entradas():#Funcion para limpiar las credenciales ingresadas
     entrada_usuario.delete(0, tk.END)
